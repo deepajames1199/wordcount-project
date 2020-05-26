@@ -1,0 +1,26 @@
+<h1>WELCOME</h1>
+
+<h1>Your Text:</h1>
+{{ fulltext }}
+
+<h1>There are {{ count }} words in your text</h1>
+
+
+{% for word,counttotal in sorted %}
+
+{{ word}} - {{ counttotal }}
+<br />
+
+{% endfor %}
+
+<br />
+
+<a href="{% url 'home' %}">Count Again!</a>
+
+<form action="{% url 'home'%} ">
+    <input type="submit" value= "Count again!" />
+</form>
+
+<a href="{% url 'home' %}">
+    <button type="button"> Count again!</button>
+</a>
