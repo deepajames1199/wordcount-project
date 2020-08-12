@@ -6,7 +6,7 @@ def home(request):
     
 
 def count(request):
-    fulltext = request.GET['fulltext']
+    fulltext = request.POST['fulltext']
     wordlist=fulltext.split()
     worddictionary={}
     for word in wordlist:
